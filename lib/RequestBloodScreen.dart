@@ -1,4 +1,4 @@
-import 'package:blood_connect/Utils/Validators.dart';
+import 'Utils/Validators.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 

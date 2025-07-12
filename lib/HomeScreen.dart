@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:blood_connect/RequestBloodScreen.dart';
-import 'package:blood_connect/BloodRequestListScreen.dart';
+import 'RequestBloodScreen.dart';
+import 'BloodRequestListScreen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

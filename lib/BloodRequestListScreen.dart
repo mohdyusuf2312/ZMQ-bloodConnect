@@ -210,44 +210,19 @@ class _BloodRequestListScreenState extends State<BloodRequestListScreen> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 10,
-                                        vertical: 4,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: _statusColor(status),
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Text(
-                                        status,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(width: 8),
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 10,
-                                        vertical: 4,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: _urgencyColor(
-                                          data['urgency'] ?? '',
-                                        ),
-                                        borderRadius: BorderRadius.circular(8),
-                                      ),
-                                      child: Text(
-                                        data['urgency'],
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                    vertical: 4,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: _statusColor(status),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Text(
+                                    status,
+                                    style: const TextStyle(color: Colors.white),
+                                  ),
                                 ),
                               ],
                             ),
@@ -255,6 +230,24 @@ class _BloodRequestListScreenState extends State<BloodRequestListScreen> {
                             Text("Hospital: ${data['hospital']}"),
                             Text("City: ${data['city']}"),
                             Text("Contact: ${data['contact']}"),
+                            const SizedBox(height: 6),
+
+                            // 👇 Urgency shown below contact
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
+                              decoration: BoxDecoration(
+                                color: _urgencyColor(data['urgency'] ?? ''),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Text(
+                                data['urgency'] ?? '',
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                            ),
+
                             const SizedBox(height: 8),
                             if (status != 'Fulfilled')
                               Align(

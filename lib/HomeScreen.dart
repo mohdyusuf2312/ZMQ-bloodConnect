@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
             child: _buildCard(
               context,
               title: 'Find Requests',
-              description: 'See who needs blood in your area.',
+              description: 'See who needs blood.',
               icon: Icons.search,
               color: Colors.orange,
               onTap: () {

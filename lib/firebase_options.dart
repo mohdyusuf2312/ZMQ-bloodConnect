@@ -69,6 +69,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '208020628865',
     projectId: 'bloodconnect-9d457',
     storageBucket: 'bloodconnect-9d457.firebasestorage.app',
-    iosBundleId: 'com.example.bloodConnect',
+    iosBundleId: 'com.zmq.bloodConnect',
   );
 }
